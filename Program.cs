@@ -35,6 +35,9 @@
             {
                 bigBoy.Dispose();
             }
+
+            BenifitsOfCollection b = new BenifitsOfCollection();
+            b.CollectData();
         }
     }
 

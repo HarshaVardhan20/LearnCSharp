@@ -5,7 +5,7 @@ using System.Collections;
 
 class Program
 {
-    static void Main()
+    static void Maina()
     {
         List<object> list = new List<object>();
 
