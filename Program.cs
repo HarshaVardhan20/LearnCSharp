@@ -2,44 +2,33 @@
 {
     public class Program
     {
-
-
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello, World!");
-            //YoungProfessional yp = new YoungProfessional();
+            PrintingCompany printingCompany = new PrintingCompany();
 
-            //GeneralUses.GetRno();
-            //GeneralUses.GetRno();
+            // ✅ Multicast delegate (use += to add)
+            printingCompany.CustomerChoicePrintMessage = HappyDeepali;
+            printingCompany.CustomerChoicePrintMessage += Method1;
+            printingCompany.CustomerChoicePrintMessage += HappyNewYear;
 
-            //string sent = "I am Fine.";
-            //int count = sent.WordCount();
-            //Console.WriteLine(count);
+            printingCompany.Print("RAM");
 
+            Console.ReadLine();
+        }
 
-            BigBoy bigBoy=new BigBoy();
+        private static string Method1(string message)
+        {
+            return "Welcome to Delegate World ------ " + message;
+        }
 
-            try
-            {
-                bigBoy.Names = new System.Collections.ArrayList();
-                for (int i = 0; i < 10; i++)
-                {
-                    bigBoy.Names.Add(i.ToString());
-                }
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-            finally
-            {
-                bigBoy.Dispose();
-            }
+        private static string HappyNewYear(string message)
+        {
+            return "Happy new year " + message;
+        }
 
-            BenifitsOfCollection b = new BenifitsOfCollection();
-            b.CollectData();
+        private static string HappyDeepali(string message)
+        {
+            return "Happy Depavali " + message;
         }
     }
-
-
 }
