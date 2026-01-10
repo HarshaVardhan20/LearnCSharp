@@ -5,7 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>CallbacksWithDelegates.Program</StartupObject>
+    <StartupObject>LearningCSharp.CustomException</StartupObject>
   </PropertyGroup>
 
 </Project>
