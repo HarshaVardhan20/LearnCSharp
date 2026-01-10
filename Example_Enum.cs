@@ -39,6 +39,7 @@ namespace LearningCSharp
             string variableForDay = GetWeekDay(WeekDays.Thursday, ref numValuePara);
             Console.WriteLine(variableForDay);
             Console.WriteLine(numValuePara);
+           
         }
         public static string GetWeekDay(WeekDays weekDays, ref int  numValue)
         {
