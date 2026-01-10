@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,18 @@ namespace LearningCSharp
 {
     public class AppCustomException : Exception
     {
-        public override string Message => "Internal Exception";
+        
+
+        public override string Message => HandleBase(base.Message) ;
+
+        private string HandleBase(string sysMessage)
+        {
+            //Oringinal Message from base class
+            Console.WriteLine(sysMessage);
+
+            return "Internal Exception Occurred. Please contact Admin.";
+        }
+
+        
     }
 }
